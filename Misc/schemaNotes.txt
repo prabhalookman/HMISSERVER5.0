@@ -1,0 +1,37 @@
+type Location {}
+type Locationsetting {}
+type LocationsettingOncall {}
+type LocationsettingInperson {}
+type LocationsettingVideo {}
+
+type Timing {}
+type Timeformat {}
+type TimingBreaktime {}
+type TimingRecurringRule {}
+
+type Address {}
+type AddressPhone {}
+
+type Business {}
+type Businessinfo {}
+type BusinessinfoPolicy {}
+type BusinessSocial_network {}
+type Businesscategory {}
+
+type Staff {}
+type Staffdetail {}
+type StaffdetailSync {}
+type StaffSocial_network {}
+type StaffPhone {}
+
+type Site {}
+type Workspace {}
+type User {}
+type Permission {}
+type Role {}
+
+********
+type InsertManyPayload {}
+type UpdateManyPayload {}
+type DeleteManyPayload {}
+Total Schema = 26
