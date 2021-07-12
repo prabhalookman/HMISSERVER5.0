@@ -4,36 +4,54 @@ export default gql`
 
 type Workspace {
     _id: ID
-    accessible: Boolean
-    active: Boolean
+    name: String
+    type: String
+    new_business: Boolean
     color_code: String
-    created_at: DateTime
-    created_by: ID
-    default_language: String
-    delete: Boolean
-    deleted_at: DateTime
     display_name: String
     display_order: Int
-    is_owner: Boolean
-    name: String
-    new_business: Boolean
-    site_id: Site
     time_zone: String
-    type: String
-    updated_at: DateTime
+    default_language: String
+    calendar_view_settings : String
+    active: Boolean
+    delete: Boolean
+    accessible: Boolean
+    site_id: Site
+    created_by: ID
+    created_at: String
+    updated_at: String
+    deleted_at: String
+    is_owner: Boolean
 }
 
-  input workspaceInput {
-
+input workspaceInput {
+    name: String
+    type: String
+    new_business: Boolean
+    color_code: String
+    display_name: String
+    display_order: Int
+    time_zone: String
+    default_language: String
+    calendar_view_settings : String
+    active: Boolean
+    delete: Boolean
+    accessible: Boolean
+    site_id: ID
+    created_by: ID
+    created_at: String
+    updated_at: String
+    deleted_at: String
+    is_owner: Boolean
 }
 
 extend type Query {
-    getSite: [Workspace]
+    getWorkspace: [Workspace]
 }
 
 extend type Mutation {
-    addSite(input: workspaceInput): Workspace
-    updateSite(workspaceID: ID!, input: workspaceInput): Workspace
-    deleteSite(workspaceID: ID!): Workspace
+    addWorkspace(input: workspaceInput): Workspace
+    updateWorkspace(workspaceID: ID!, input: workspaceInput): Workspace
+    deleteWorkspace(workspaceID: ID!): Workspace
 }
 `

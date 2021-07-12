@@ -1,0 +1,9 @@
+mutation{
+  addWorkspace(input:{
+    name:"Hi"
+  })
+  {
+    _id
+    name
+  }
+}

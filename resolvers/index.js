@@ -1,8 +1,10 @@
 import siteResolver from './site'
-import userResolver from './user'
+import workspaceResolver from './workspace'
+const { GraphQLDateTime } = require('graphql-iso-date')
 
-const customScalarResolver = {
-    Date : GraphQLDateTime
-};
+// const customScalarResolver = {
+//     DateTime : GraphQLDateTime
+// };
+//customScalarResolver
 
-export default [customScalarResolver, siteResolver, userResolver]
+export default [siteResolver, workspaceResolver]
