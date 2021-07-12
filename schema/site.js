@@ -1,27 +1,41 @@
 import { gql } from 'apollo-server-express';
 
 export default gql`
+
 type Site {
     _id: ID
-    accessible: Boolean
-    account_status: String
-    active: Boolean
-    created_at: DateTime
-    created_by: ID
-    default_language: String
-    delete: Boolean
-    deleted_at: DateTime
-    googleAnalyticsCode: String
     name: String
-    payment_status: String
-    payment_status_id: String
-    subcription_id: ID
+    default_language: String
+    account_status: String
+    accessible: Boolean    
+    active: Boolean
     suspended: Boolean
-    updated_at: DateTime
+    delete: Boolean
+    payment_status_id: String
+    payment_status: String
+    subcription_id: ID
+    created_by: ID
+    created_at: String
+    updated_at: String
+    deleted_at: String
+    googleAnalyticsCode: String
 }
-
 input siteInput {
-
+    name: String
+    default_language: String
+    account_status: String
+    accessible: Boolean    
+    active: Boolean
+    suspended: Boolean
+    delete: Boolean
+    payment_status_id: String
+    payment_status: String
+    subcription_id: ID
+    created_by: ID
+    created_at: String
+    updated_at: String
+    deleted_at: String
+    googleAnalyticsCode: String
 }
 
 extend type Query {

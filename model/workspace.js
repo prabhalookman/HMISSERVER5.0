@@ -1,24 +1,24 @@
-import { number } from '@hapi/joi'
 import mongoose from 'mongoose'
 
 const workspaceSchema = new mongoose.Schema({
-    accessible: Boolean,
-    active: Boolean,
-    color_code: String,
-    created_at: DateTime,
-    created_by: ID,
-    default_language: String,
-    delete: Boolean,
-    deleted_at: DateTime,
-    display_name: String,
-    display_order: Int,
-    is_owner: Boolean,
     name: String,
-    new_business: Boolean,
-    site_id: Site,
-    time_zone: String,
     type: String,
-    updated_at: DateTime
+    new_business: Boolean,
+    color_code: String,
+    display_name: String,
+    display_order: Number,
+    time_zone: String,
+    default_language: String,
+    calendar_view_settings : String,
+    active: Boolean,
+    delete: Boolean,   
+    accessible: Boolean,
+    site_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Site' },
+    created_by: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+    created_at: String,
+    updated_at: String,   
+    deleted_at: String,
+    is_owner: Boolean 
 })
 
 const Workspace = mongoose.model('Workspace', workspaceSchema)

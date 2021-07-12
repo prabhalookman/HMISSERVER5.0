@@ -6,15 +6,15 @@ type Staff {
   avatar_or_icon: String
   avatar_or_icon_path: String
   color_code: String
-  created_at: DateTime
+  created_at: String
   created_by: Staff
-  deleted_at: DateTime
+  deleted_at: String
   description: String
   display_name: String
   email: String
-  email_verified_date_time: DateTime
-  employement_from: DateTime
-  employement_to: DateTime
+  email_verified_date_time: String
+  employement_from: String
+  employement_to: String
   experience_month: Int
   experience_year: Int
   first_name: String
@@ -32,7 +32,7 @@ type Staff {
   sortingId: Int
   staff_detail_id: [Staffdetail]
   title: String
-  updated_at: DateTime
+  updated_at: String
   user_id: User
   workspace_ids: [Workspace]
 }
