@@ -11,7 +11,7 @@ const workspaceSchema = new mongoose.Schema({
     default_language: String,
     calendar_view_settings : String,
     active: Boolean,
-    delete: Boolean,   
+    deleted: Boolean,   
     accessible: Boolean,
     site_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Site' },
     created_by: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },

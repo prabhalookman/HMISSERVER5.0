@@ -1,30 +1,42 @@
 import { gql } from 'apollo-server-express';
 
 export default gql`
-type Loation {
+type Location {
   _id: ID
-  active: Boolean
-  app_integration_need: Boolean
-  created_at: DateTime
-  deleted: Boolean
-  deleted_at: DateTime
-  name: String
   type: String
-  type_param: Boolean
-  updated_at: DateTime
+  type_param: Boolean  
+  app_integration_need: Boolean
+  icon: String
+  icon_path: String
+  active: Boolean
+  deleted: Boolean
+  created_at: String
+  updated_at: String
+  deleted_at: String
+  name: String
 }
 
 input locationInput {
-
+  type: String
+  type_param: Boolean  
+  app_integration_need: Boolean
+  icon: String
+  icon_path: String
+  active: Boolean
+  deleted: Boolean
+  created_at: String
+  updated_at: String
+  deleted_at: String
+  name: String
 }
 
 extend type Query {
-    getLocation: [Loation]
+  getLocation: [Location]
 }
 
 extend type Mutation {
-    addLocation(input: locationInput): Loation
-    updateLocation(locationID: ID!, input: locationInput): Loation
-    deleteLocation(locationID: ID!): Loation
+    addLocation(input: locationInput): Location
+    updateLocation(locationID: ID!, input: locationInput): Location
+    deleteLocation(locationID: ID!): Location
 }
 `

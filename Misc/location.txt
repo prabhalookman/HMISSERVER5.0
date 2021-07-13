@@ -1,0 +1,58 @@
+mutation{
+  addLocation(input:{
+  type: "InPerson"
+  type_param: true
+  app_integration_need: true
+  icon: null
+  icon_path: null
+  active: true
+  deleted: false
+  created_at: "2021-06-24"
+  updated_at: "2021-06-24"
+  deleted_at: "2021-06-24"
+  name: "InPerson"
+  }){
+    _id
+    type
+    created_at
+    deleted
+  }
+}
+----
+mutation{
+  updateLocation(locationID:"60ed42691d14cf34d80c4b3d",input:{
+  type: "OutPerson"
+  type_param: true
+  app_integration_need: true
+  icon: null
+  icon_path: null
+  active: true
+  deleted: false
+  created_at: "2021-06-24"
+  updated_at: "2021-06-24"
+  deleted_at: "2021-06-24"
+  name: "InPerson"
+  }, ){
+    _id
+    type
+    created_at
+    deleted
+  }
+}
+----
+mutation{
+  deleteLocation(locationID: "60ed42691d14cf34d80c4b3d"){
+    _id
+    type
+    deleted
+  }
+}
+----------------
+query {
+  getLocation {
+    _id
+    type
+    deleted
+  }
+}
+-
