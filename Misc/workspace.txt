@@ -1,9 +1,77 @@
-mutation{
-  addWorkspace(input:{
-    name:"Hi"
-  })
-  {
+mutation {
+  addWorkspace(
+    input: {
+      name: "workspace 1"
+      type: "Event"
+      new_business: true
+      color_code: "9999"
+      display_name: "LkmSpa"
+      display_order: 1
+      time_zone: "Kolkatta/Chennai"
+      default_language: "en"
+      calendar_view_settings: null
+      active: true
+      deleted: true
+      accessible: true
+      site_id: "60e2eead5a12d07c2bef058c"
+      created_by: "60e2fd865a12d07c2bef05d4"
+      created_at: "2021-06-24"
+      updated_at: "2021-06-24"
+      deleted_at: "2021-06-24"
+      is_owner: true
+    }
+  ) {
     _id
     name
+    type
+    delete
+  }
+}
+-----
+mutation {
+  updateWorkspace(
+    workspaceID:"60ed492b4bdef938f022d20d"
+    input: {
+      name: "workspace 1"
+      type: "Event New"
+      new_business: true
+      color_code: "9999"
+      display_name: "LkmSpa"
+      display_order: 1
+      time_zone: "Kolkatta/Chennai"
+      default_language: "en"
+      calendar_view_settings: null
+      active: true
+      deleted: true
+      accessible: true
+      site_id: "60e2eead5a12d07c2bef058c"
+      created_by: "60e2fd865a12d07c2bef05d4"
+      created_at: "2021-06-24"
+      updated_at: "2021-06-24"
+      deleted_at: "2021-06-24"
+      is_owner: true
+    }
+  ) {
+    _id
+    name
+    type
+    deleted
+  }
+}
+------
+query{
+  getWorkspace{
+    _id
+    name
+    type
+    deleted
+  }
+}
+---
+mutation{
+  deleteWorkspace(workspaceID: "60ed492b4bdef938f022d20d"){
+    _id
+    name
+    deleted
   }
 }

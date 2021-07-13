@@ -15,7 +15,7 @@ mutation {
       accessible: true
       active: true
       suspended: false
-      delete: false
+      deleted: false
       payment_status_id: "DDDG"
       payment_status: "Active"
       subcription_id: null
@@ -28,5 +28,40 @@ mutation {
   ) {
     name
     account_status
+  }
+}
+-----
+mutation {
+  updateSite(
+    siteID:"60ec2ecc1fb0c42560fbf5d2"
+    input: {
+      name: "Site 02"
+      default_language: "es"
+      account_status: "InActive"
+      accessible: true
+      active: true
+      suspended: false
+      deleted: false
+      payment_status_id: "DDDG"
+      payment_status: "Active"
+      subcription_id: null
+      created_by: null
+      created_at: "2021-07-12"
+      updated_at: "2021-07-12"
+      deleted_at: "2021-07-12"
+      googleAnalyticsCode: "2021-07-12"
+    }
+  ) {
+    _id
+    name    
+    deleted
+  }
+}
+-----
+query{
+  getSite{
+    _id
+    name    
+    deleted
   }
 }

@@ -53,8 +53,8 @@ export default {
         deleteSite: async (parent, args, { models }, info) => {
             try {
                 args = args.siteID;
-                const deleteStatus = false;
-                let updateObj = { status: deleteStatus }
+                const deleteStatus = true;
+                let updateObj = { deleted: deleteStatus }
 
                 let resultSite = await models.Site.findOneAndUpdate({ _id: args }, updateObj, { new: true });
                 if (resultSite) {

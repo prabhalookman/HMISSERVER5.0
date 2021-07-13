@@ -53,8 +53,8 @@ export default {
     deleteWorkspace: async (parent, args, { models }, info) => {
       try {
         args = args.workspaceID;
-        const deleteStatus = false;
-        let updateObj = { status: deleteStatus }
+        const deleteStatus = true;
+        let updateObj = { deleted: deleteStatus }
 
         let resultWorkspace = await models.Workspace.findOneAndUpdate({ _id: args }, updateObj, { new: true });
         if (resultWorkspace) {

@@ -7,7 +7,7 @@ const siteSchema = new mongoose.Schema({
     accessible: Boolean,
     active: Boolean,
     suspended: Boolean,
-    delete: Boolean,
+    deleted: Boolean,
     payment_status_id: String,
     payment_status: String,
     subcription_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Subscription' },

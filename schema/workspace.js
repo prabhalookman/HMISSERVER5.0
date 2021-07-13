@@ -14,7 +14,7 @@ type Workspace {
     default_language: String
     calendar_view_settings : String
     active: Boolean
-    delete: Boolean
+    deleted: Boolean
     accessible: Boolean
     site_id: Site
     created_by: ID
@@ -35,7 +35,7 @@ input workspaceInput {
     default_language: String
     calendar_view_settings : String
     active: Boolean
-    delete: Boolean
+    deleted: Boolean
     accessible: Boolean
     site_id: ID
     created_by: ID

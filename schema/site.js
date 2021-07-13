@@ -10,7 +10,7 @@ type Site {
     accessible: Boolean    
     active: Boolean
     suspended: Boolean
-    delete: Boolean
+    deleted: Boolean
     payment_status_id: String
     payment_status: String
     subcription_id: ID
@@ -27,7 +27,7 @@ input siteInput {
     accessible: Boolean    
     active: Boolean
     suspended: Boolean
-    delete: Boolean
+    deleted: Boolean
     payment_status_id: String
     payment_status: String
     subcription_id: ID

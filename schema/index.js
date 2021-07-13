@@ -1,6 +1,8 @@
 import { gql } from 'apollo-server-express';
 import siteSchema from './site'
 import workspaceSchema from './workspace'
+import locationSchema  from './location'
+import loationSettingSchema  from './locationsetting'
 
 const baseSchema = gql`
 type Query {
@@ -14,4 +16,4 @@ type Subscription {
 }
 `;
 // scalar Date
-export default [baseSchema, siteSchema, workspaceSchema ]
+export default [baseSchema, siteSchema, workspaceSchema, locationSchema, loationSettingSchema ]

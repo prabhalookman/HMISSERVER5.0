@@ -1,5 +1,8 @@
 import siteResolver from './site'
 import workspaceResolver from './workspace'
+import locationResolver from './location'
+import locationSettingResolver from './locationsetting'
+
 const { GraphQLDateTime } = require('graphql-iso-date')
 
 // const customScalarResolver = {
@@ -7,4 +10,4 @@ const { GraphQLDateTime } = require('graphql-iso-date')
 // };
 //customScalarResolver
 
-export default [siteResolver, workspaceResolver]
+export default [siteResolver, workspaceResolver, locationResolver, locationSettingResolver]
