@@ -1,0 +1,50 @@
+mutation {
+  addAddOn(
+    input: {
+      name: "Teeth Cleaning"
+      price: 10.2
+      variant: { name: "Gel", price: 10.25 }
+      show_multiple_time: true
+      once_per_order: true
+      event_ids: ["60e300635a12d07c2bef0602"]
+      workspace_ids: ["60e300635a12d07c2bef0602"]
+      active: true
+      delete: true
+      site_id: "60e2eead5a12d07c2bef058c"
+    }
+  ) {
+    _id
+    name
+    variant {
+      name
+      price
+    }
+  }
+}
+----
+mutation {
+  updateAddOn(
+    addOnID: "60f153e0aa647b334407849f"
+    input: {
+      name: "Teeth Cleaning2"
+      price: 15.2
+      variant: { name: "Green", price: 20.25 }      
+    }
+  ) {
+    _id
+    name
+    price
+    variant {
+      name
+      price
+    }
+  }
+}
+----
+mutation {
+  deleteAddOn(addOnID: "60f153e0aa647b334407849f") {
+    _id    
+    name
+    delete    
+  }
+}

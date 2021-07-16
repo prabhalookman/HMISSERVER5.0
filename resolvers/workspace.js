@@ -2,7 +2,7 @@ export default {
   Query: {
     getWorkspace: async (parent, args, { models }, info) => {
       try {
-        let workspace = await models.Workspace.find({})
+        let workspace = await models.Workspace.find({delete:false})
         return workspace
       } catch (error) {
         console.error("Error : ", error)

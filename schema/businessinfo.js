@@ -3,43 +3,78 @@ import { gql } from 'apollo-server-express';
 export default gql`
 type Businessinfo {
   _id: ID
-  accessible: Boolean
-  active: Boolean
-  address_ids: [Address]
-  bookingLinks: String
-  business_category: [Businesscategory]
-  business_hour_end: Int
-  business_hour_start: Int
-  created_at: DateTime
-  created_by: Staff
-  date_format: String
-  delete: Boolean
-  deleted_at: DateTime
-  first_day: Int
-  is_tax: Boolean
-  policy: BusinessinfoPolicy
-  restrictedDays: [DateTime]
-  site_id: Site
-  tax_no: String
-  tax_percentage: Int
-  timeFormat: Int
-  time_zone: String
-  timing_ids: [ID]
-  updated_at: DateTime
-  workspace_id: [Workspace]
+  address_ids: [String],
+  timing_ids: [String],
+  time_zone: String,
+  timeFormat: Int,
+  date_format: String,
+  first_day: Int,
+  business_hour_start: Int,
+  business_hour_end: Int,
+  business_category_ids: [String],
+  restrictedDays: [String],
+  active: Boolean,
+  accessible: Boolean,
+  delete: Boolean,
+  booking_links: String,
+  is_tax: Boolean,
+  tax_no: String,
+  tax_percentage: Int,
+  policy: BusinessInfo_policy,
+  site_id: String,
+  workspace_ids: [String],
+  created_by: String,
+  created_at: String,
+  updated_at: String,
+  deleted_at: String
 }
 
 input businessinfoInput {
+  address_ids: [String],
+  timing_ids: [String],
+  time_zone: String,
+  timeFormat: Int,
+  date_format: String,
+  first_day: Int,
+  business_hour_start: Int,
+  business_hour_end: Int,
+  business_category_ids: [String],
+  restrictedDays: [String],
+  active: Boolean,
+  accessible: Boolean,
+  delete: Boolean,
+  booking_links: String,
+  is_tax: Boolean,
+  tax_no: String,
+  tax_percentage: Int,
+  policy: BusinessInfo_policyInput,
+  site_id: String,
+  workspace_ids: [String],
+  created_by: String,
+  created_at: String,
+  updated_at: String,
+  deleted_at: String
+}
 
+type BusinessInfo_policy {
+  appointment: String,
+  cancellation: String,
+  terms_and_condition: String
+}
+
+input BusinessInfo_policyInput {
+  appointment: String,
+  cancellation: String,
+  terms_and_condition: String
 }
 
 extend type Query {
-    getBusinessinfo: [Businessinfo]
+  getBusinessInfo: [Businessinfo]
 }
 
 extend type Mutation {
-    addBusinessinfo(input: businessinfoInput): Businessinfo
-    updateBusinessinfo(businessinfoID: ID!, input: businessinfoInput): Businessinfo
-    deleteBusinessinfo(businessinfoID: ID!): Businessinfo
+    addBusinessInfo(input: businessinfoInput): Businessinfo
+    updateBusinessInfo(businessinfoID: ID!, input: businessinfoInput): Businessinfo
+    deleteBusinessInfo(businessinfoID: ID!): Businessinfo
 }
 `

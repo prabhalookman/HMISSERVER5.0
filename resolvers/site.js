@@ -2,7 +2,7 @@ export default {
     Query: {
         getSite: async (parent, args, { models }, info) => {
             try {
-                let site = await models.Site.find({})
+                let site = await models.Site.find({delete:false})
                 return site
             } catch (error) {
                 console.error("Error : ", error)
