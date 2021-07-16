@@ -2,7 +2,7 @@ export default {
   Query: {
       getLocationSetting: async (parent, args, { models }, info) => {
           try {
-              let locationsetting = await models.LocationSetting.find({})
+              let locationsetting = await models.LocationSetting.find({delete:false})
               return locationsetting
           } catch (error) {
               console.error("Error : ", error)
@@ -66,7 +66,12 @@ export default {
           } catch (error) {
               console.error("Error : ", error)
           }
-
-      },
+      }      
+  },
+  Locationsetting: {
+    site_id: async (Locationsetting) => {
+      const resultLocationSetting =await Locationsetting.populate('site_id').execPopulate();
+      return resultLocationSetting.site_id
+    }
   }
 }

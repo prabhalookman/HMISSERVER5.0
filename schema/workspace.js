@@ -16,7 +16,7 @@ type Workspace {
     active: Boolean
     deleted: Boolean
     accessible: Boolean
-    site_id: Site
+    site_id: ID
     created_by: ID
     created_at: String
     updated_at: String

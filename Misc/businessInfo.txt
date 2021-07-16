@@ -1,0 +1,35 @@
+mutation {
+  addBusinessInfo(
+    input: {
+      address_ids: ["60e40eab5a12d07c2bef0648"]
+      timing_ids: ["60e40d425a12d07c2bef063a"]
+      time_zone: "Asia/kolkatta"
+      timeFormat: 8
+      date_format: "dd-MM-YYYY"
+      first_day: 2
+      business_hour_start: 10
+      business_hour_end: 30
+      business_category_ids: ["60e300635a12d07c2bef0602"]
+      restrictedDays: ["2021-06-24T08: 40: 53.973+0000"]
+      active: true
+      accessible: true
+      delete: true
+      booking_links: "https: //hmis.com/anand-32/30min-2"
+      is_tax: true
+      tax_no: "TX125"
+      tax_percentage: 2
+      policy: { appointment: "", cancellation: "", terms_and_condition: "" }
+      site_id: "60e2eead5a12d07c2bef058c"
+      workspace_ids: ["60e300635a12d07c2bef0602"]
+      created_by: "60e2fd865a12d07c2bef05d4"
+      created_at: "2021-06-24T08: 40: 53.973+0000"
+      updated_at: "2021-06-24T08: 40: 53.973+0000"
+      deleted_at: "2021-06-24T08: 40: 53.973+0000"
+    }
+  ) {
+    _id
+    timeFormat
+    tax_no
+    delete
+  }
+}

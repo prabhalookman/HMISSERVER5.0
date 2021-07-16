@@ -7,7 +7,7 @@ type BusinessSocial_network {
   network: String
 }
 
-inut businessSocialNetworkInput {
+input businessSocialNetworkInput {
   link: String
   network: String
 }
