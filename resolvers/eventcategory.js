@@ -2,7 +2,7 @@ export default {
   Query: {
       getEventCategory: async (parent, args, { models }, info) => {
           try {
-              let eventCategory = await models.EventCategory.find({delete:false})
+              let eventCategory = await models.EventCategory.find({deleted:false})
               return eventCategory
           } catch (error) {
               console.error("Error : ", error)

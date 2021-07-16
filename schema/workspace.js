@@ -16,7 +16,7 @@ type Workspace {
     active: Boolean
     deleted: Boolean
     accessible: Boolean
-    site_id: ID
+    site_id: Site
     created_by: ID
     created_at: String
     updated_at: String
@@ -37,7 +37,7 @@ input workspaceInput {
     active: Boolean
     deleted: Boolean
     accessible: Boolean
-    site_id: ID
+    site_id: siteInput
     created_by: ID
     created_at: String
     updated_at: String

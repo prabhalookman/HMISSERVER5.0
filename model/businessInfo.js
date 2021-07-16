@@ -13,7 +13,7 @@ const businessInfoSchema = new mongoose.Schema({
   restrictedDays: [String],
   active: Boolean,
   accessible: Boolean,
-  delete: Boolean,
+  deleted: Boolean,
   booking_links: String,
   is_tax: Boolean,
   tax_no: String,
