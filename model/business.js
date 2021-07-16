@@ -12,7 +12,7 @@ const businessSchema = new mongoose.Schema({
   avatar_or_icon_path: String,
   active: Boolean,
   accessible: Boolean,
-  delete: Boolean,
+  deleted: Boolean,
   email_signature: String,
   showSocialShare: Boolean,
   social_network: [

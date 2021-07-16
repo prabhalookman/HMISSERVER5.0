@@ -59,12 +59,14 @@ mutation {
   }
 }
 ------
-query{
-  getWorkspace{
+query {
+  getWorkspace {
     _id
     name
-    type
-    deleted
+    site_id {
+      _id
+      name
+    }
   }
 }
 ---

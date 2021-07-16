@@ -44,11 +44,13 @@ mutation{
   }
 }
 ----
-query{
-  getLocationSetting{
+query {
+  getLocationSetting {
     _id
-    inperson{
-      buinsess_address
+    active
+    site_id {
+      _id
+      name
     }
   }
 }

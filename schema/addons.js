@@ -11,7 +11,7 @@ type AddOn {
   event_ids: [String],
   workspace_ids: [String],
   active: Boolean,
-  delete: Boolean,
+  deleted: Boolean,
   site_id: String
 }
 
@@ -29,7 +29,7 @@ input addOnInput {
   event_ids: [String],
   workspace_ids: [String],
   active: Boolean,
-  delete: Boolean,
+  deleted: Boolean,
   site_id: String
 }
 

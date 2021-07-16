@@ -9,7 +9,7 @@ const eventSchema = new mongoose.Schema({
   event_type: String,
   description: String,
   active: Boolean,
-  delete: Boolean,
+  deleted: Boolean,
   color_code: String,
   display_name: String,
   booking_url: String,

@@ -39,7 +39,7 @@ input locationSettingInput {
   updated_at: String  
   deleted_at: String  
   workspace_id: ID
-  site_id: ID
+  site_id: siteInput
   location_id: ID
   active: Boolean
   deleted: Boolean
