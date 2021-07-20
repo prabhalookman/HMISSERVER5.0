@@ -9,6 +9,11 @@ import EventCategory  from "./eventcategory"
 import Event  from "./events"
 import AddOn from "./addons"
 
+import Role  from './role'
+import User  from './user'
+import TimeFormat  from './timeformat'
+import Timings  from './timings'
+
 const connectMongo = () => {
   return mongoose.connect(process.env.MONGO_URL, {useNewUrlParser : true, useFindAndModify: false, useUnifiedTopology: true})
 }
@@ -22,7 +27,11 @@ const models = {
   BusinessInfo,
   EventCategory,
   Event,
-  AddOn
+  AddOn,
+  Role,
+  User,
+  TimeFormat,
+  Timings
 }
 
 export {connectMongo};
