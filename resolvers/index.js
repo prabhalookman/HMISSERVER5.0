@@ -11,6 +11,9 @@ import roleResolver  from './role'
 import userResolver  from './user'
 import timeformatResolver  from './timeformat'
 import timingsResolver  from './timings'
+import staffResolver  from './staff'
+import staffDetailsResolver  from './staffdetails'
+import addressResolver  from './address'
 
 const { GraphQLDateTime } = require('graphql-iso-date')
 
@@ -19,4 +22,21 @@ const { GraphQLDateTime } = require('graphql-iso-date')
 // };
 //customScalarResolver
 
-export default [siteResolver, workspaceResolver, locationResolver, locationSettingResolver, businessResolver, businessInfoResolver, eventCategoryResolver, eventsResolver, addonsResolver, roleResolver, userResolver, timeformatResolver, timingsResolver]
+export default [
+  siteResolver, 
+  workspaceResolver, 
+  locationResolver, 
+  locationSettingResolver, 
+  businessResolver, 
+  businessInfoResolver, 
+  eventCategoryResolver, 
+  eventsResolver, 
+  addonsResolver, 
+  roleResolver, 
+  userResolver, 
+  timeformatResolver, 
+  timingsResolver, 
+  staffResolver,
+  staffDetailsResolver,
+  addressResolver
+]

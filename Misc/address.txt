@@ -1,0 +1,41 @@
+mutation {
+  addAddress(
+    input: {
+      address1: "chennai"
+      address2: "chennai"
+      city: "sdsd"
+      state: "sdad"
+      country: "sadsad"
+      zipCode: "600015"
+      latitude: "13.0826802"
+      longitude: "80.2707184"
+      type: "Business/Home/Staff/Customer"
+      business_branch: true
+      address_phone: [
+        {
+          name: "Business/Personal/Home"
+          phone_type: "Mobile/Landline"
+          country_code: "India"
+          no: "98989898"
+          Ext: "12"
+        }
+      ]
+      email: "anand@lookman.in"
+      customer_id: null
+      account_status: "Active"
+      active: true
+      accessible: true
+      delete: true
+      site_id: "60e2eead5a12d07c2bef058c"
+      workspace_ids: ["60e300635a12d07c2bef0602"]
+      created_by: "60e40b0d5a12d07c2bef0627"
+      created_at: "2021-06-24T08:40:53.973+0000"
+      updated_at: "2021-06-24T08:40:53.973+0000"
+      deleted_at: "2021-06-24T08:40:53.973+0000"
+      default_address: true
+      business_head_ofice: true
+    }
+  ) {
+    country
+  }
+}

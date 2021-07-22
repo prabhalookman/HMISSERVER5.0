@@ -8,6 +8,9 @@ import BusinessInfo from './businessInfo';
 import EventCategory  from "./eventcategory"
 import Event  from "./events"
 import AddOn from "./addons"
+import Staff from "./staff"
+import StaffDetails from "./staffdetails"
+import Address from "./address"
 
 import Role  from './role'
 import User  from './user'
@@ -31,7 +34,10 @@ const models = {
   Role,
   User,
   TimeFormat,
-  Timings
+  Timings,
+  Staff,
+  StaffDetails,
+  Address
 }
 
 export {connectMongo};

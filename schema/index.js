@@ -12,6 +12,9 @@ import roleSchema  from './role'
 import userSchema  from './user'
 import timeformatSchema  from './timeformat'
 import timingsSchema  from './timings'
+import staffSchema  from './staff'
+import staffDetailsSchema  from './staffdetails'
+import addressSchema  from './address'
 
 const baseSchema = gql`
 type Query {
@@ -25,4 +28,21 @@ type Subscription {
 }
 `;
 // scalar Date
-export default [baseSchema, siteSchema, workspaceSchema, locationSchema, loationSettingSchema, businessSchema, businessInfoSchema, eventCategorySchema, eventsSchema, addOnSchema, roleSchema, userSchema, timeformatSchema, timingsSchema ]
+export default [baseSchema, 
+  siteSchema, 
+  workspaceSchema, 
+  locationSchema, 
+  loationSettingSchema, 
+  businessSchema, 
+  businessInfoSchema, 
+  eventCategorySchema, 
+  eventsSchema, 
+  addOnSchema, 
+  roleSchema, 
+  userSchema, 
+  timeformatSchema, 
+  timingsSchema, 
+  staffSchema, 
+  staffDetailsSchema,
+  addressSchema
+]
